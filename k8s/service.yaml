@@ -11,9 +11,5 @@ spec:
       port: 8080
       targetPort: 8080
       protocol: TCP
-    - name: https
-      protocol: TCP
-      port: 443
-      targetPort: 8080
   selector:
     app: vote-ui
