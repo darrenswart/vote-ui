@@ -5,9 +5,11 @@ metadata:
     app: vote-ui
   name: vote-ui
 spec:
-  port:
-    targetPort: 8080-tcp
+  #port:
+  #  targetPort: 8080-tcp
   to:
     kind: Service
     name: vote-ui
     weight: 100
+  tls:
+    termination: edge
