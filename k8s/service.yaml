@@ -5,11 +5,15 @@ metadata:
     app: vote-ui
   name: vote-ui
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
     - name: 8080-tcp
       port: 8080
       targetPort: 8080
       protocol: TCP
+    - name: https
+      protocol: TCP
+      port: 443
+      targetPort: 8080
   selector:
     app: vote-ui
